@@ -1,18 +1,17 @@
-package boj;
-import java.io.*;
-import java.util.*;
+package boj.p11729;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
 
 public class Main {
     public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st;
-
-        // 예시 입력 (한 줄 정수)
         int N = Integer.parseInt(br.readLine());
 
-        StringBuilder sb = new StringBuilder();
-        sb.append(N);
 
-        System.out.println(sb);
+
+
     }
 }
