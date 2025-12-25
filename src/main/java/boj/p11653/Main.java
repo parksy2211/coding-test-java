@@ -1,5 +1,5 @@
 package boj.p11653;
-
+//소인수분해
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 

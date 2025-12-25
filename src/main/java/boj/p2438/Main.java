@@ -1,5 +1,5 @@
 package boj.p2438;
-
+//별그리기
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;

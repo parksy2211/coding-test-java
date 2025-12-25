@@ -1,5 +1,5 @@
 package boj.p3003;
-
+//체스판원래개수구하기
 import java.io.*;
 import java.util.*;
 
