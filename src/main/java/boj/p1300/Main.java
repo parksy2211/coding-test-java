@@ -1,28 +1,39 @@
 package boj.p1300;
 
-import java.io.*;
-import java.util.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
 
 public class Main {
-    public static void main(String[] args) throws Exception {
+
+    static boolean getLessThanTarget(int n, int target, int k){
+        long cnt = 0L;
+        for(int i=1; i<=n; i++){
+            cnt += Math.min(target/i, n);
+        }
+        //System.out.println(target + " " + cnt);
+        return cnt >= k;
+    }
+
+    public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-
-        // 예시 입력 (한 줄 정수)
-        int N = Integer.parseInt(br.readLine());
+        int n = Integer.parseInt(br.readLine());
         int k = Integer.parseInt(br.readLine());
-//        long[] arr = new long[N*N];
-//        long idx=0;
-//        for(int i=1;i<=N;i++) {
-//            for(int j=1;j<=N;j++) {
-//                arr[(int) idx++] = i*j;
-//            }
-//        }
-//
-//        Arrays.sort(arr);
-//        System.out.print(arr[k-1]);
 
+        int left = 1;
+        int right = k;
 
-        //
+        while(left < right){
+            int mid = (left+right)/2;
 
+            if(getLessThanTarget(n, mid, k)){
+                right = mid;
+            } else {
+                left = mid+1;
+            }
+        }
+
+        System.out.print(left);
     }
 }
