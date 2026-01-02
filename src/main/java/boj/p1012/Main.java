@@ -16,31 +16,31 @@ public class Main {
             int M = Integer.parseInt(st.nextToken());
             int N = Integer.parseInt(st.nextToken());
             int K = Integer.parseInt(st.nextToken());
+            Stack<Integer> stack = new Stack<>();
+            int count = 0;
             ///농장에 배추위치에 1 넣기
-            int[][] farm = new int[M+2][N+2];
+            int[][] farm = new int[M][N];
+            int[][] visited = new int[M][N];
             for (int j = 0; j < K; j++) {
                 st = new StringTokenizer(br.readLine());
                 int a = Integer.parseInt(st.nextToken());
                 int b = Integer.parseInt(st.nextToken());
-                farm[a+1][b+1] = 1;
+                farm[a][b] = 1;
             }
-            ///최적위치에 지렁이 심기
+            for (int o=0;o<M;o++) {
+                for(int p=0;p<N;p++) {
+                    if(farm[o][p]==1){
 
-            for(int w=5;w>0;w--) {
-                for(int o=1;o<=M;o++) {
-                    for(int p=1;p<=N;p++) {
-                        if(w == farm[o-1][p]+farm[o][p]+farm[o+1][p]+farm[o][p+1]+farm[o][p-1]){
-                            sum +=1;
-                            farm[o-1][p] = 0;
-                            farm[o][p] = 0;
-                            farm[o+1][p] = 0;
-                            farm[o][p+1] = 0;
-                            farm[o][p-1] = 0;
-                        }
+
                     }
                 }
             }
-            System.out.println(sum);
+
+
+
+
+
+
         }
 
     }
