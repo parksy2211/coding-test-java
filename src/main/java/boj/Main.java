@@ -7,12 +7,9 @@ public class Main {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st;
 
-        // 예시 입력 (한 줄 정수)
-        int N = Integer.parseInt(br.readLine());
+        String str1 = "madplay"; // new 연산자 방식
+        String str2 = "madplay";			// 리터럴 방식
 
-        StringBuilder sb = new StringBuilder();
-        sb.append(N);
-
-        System.out.println(sb);
+        System.out.println("str1 == str2 : " + (str1 == str2));  // false
     }
 }
